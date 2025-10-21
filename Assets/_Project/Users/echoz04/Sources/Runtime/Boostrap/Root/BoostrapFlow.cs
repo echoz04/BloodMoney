@@ -7,7 +7,7 @@ namespace Sources.Runtime.Boostrap.Root
 {
     public class BoostrapFlow : IStartable
     {
-        private const Scene _sceneToLoad = Scene.Gameplay;
+        private const Scene _sceneToLoad = Scene.Level1;
         
         private readonly ISceneLoader _serviceLoader;
         

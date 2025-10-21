@@ -8,7 +8,7 @@ namespace Sources.Editor
 {
     public static class GameBootstrapMenu
     {
-        private const string BootstrapScenePath = "Assets/_Project/Scenes/Bootstrap.unity";
+        private const string BootstrapScenePath = "Assets/_Project/Users/echoz04/Scenes/Bootstrap.unity";
 
         [MenuItem("Tools/Project/Quick start")]
         public static void OpenBootstrapAndPlay()
