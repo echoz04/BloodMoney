@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Gameplay.Character.CharacterRoot
   _controller: {fileID: 8370197453957784786}
+  _animator: {fileID: 4965227895212422040}
 --- !u!143 &8370197453957784786
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1297,6 +1298,7 @@ GameObject:
   - component: {fileID: 7289202573301888824}
   - component: {fileID: 1073331420520456883}
   - component: {fileID: 6410063603465543347}
+  - component: {fileID: 5448524372659595948}
   - component: {fileID: 1122120182756761511}
   m_Layer: 0
   m_Name: CinemachineCamera
@@ -1455,6 +1457,36 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &5448524372659595948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780242629697940830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDecollider
+  CameraRadius: 1.5
+  Decollision:
+    Enabled: 1
+    ObstacleLayers:
+      serializedVersion: 2
+      m_Bits: 64
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Damping: 0.15
+    SmoothingTime: 0
+  TerrainResolution:
+    Enabled: 0
+    TerrainLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    MaximumRaycast: 0.5
+    Damping: 0
 --- !u!114 &1122120182756761511
 MonoBehaviour:
   m_ObjectHideFlags: 0

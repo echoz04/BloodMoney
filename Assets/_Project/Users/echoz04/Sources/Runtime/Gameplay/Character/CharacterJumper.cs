@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace Sources.Runtime.Gameplay.Character
 {
-    public sealed class CharacterJumper
+    public sealed class CharacterJumper : IDisposable
     {
         public bool IsGrounded => _controller.isGrounded;
 
@@ -17,22 +18,31 @@ namespace Sources.Runtime.Gameplay.Character
             _controller = controller;
             _data = data;
             _input = input;
+
+            _input.Movement.Jump.performed += context => Jump();
         }
 
         public void Tick()
         {
             bool isGrounded = _controller.isGrounded;
 
-            if (isGrounded && _verticalVelocity < 0f)
+            if (isGrounded == true && _verticalVelocity < 0f)
                 _verticalVelocity = _data.GroundStickForce;
-
-            if (isGrounded && _input.Movement.Jump.triggered)
-                _verticalVelocity = Mathf.Sqrt(_data.JumpForce * -2f * _data.Gravity);
 
             _verticalVelocity += _data.Gravity * Time.deltaTime;
 
             Vector3 verticalMove = new Vector3(0f, _verticalVelocity, 0f) * Time.deltaTime;
+            
             _controller.Move(verticalMove);
         }
+
+        private void Jump()
+        {
+            if (IsGrounded == true)
+                _verticalVelocity = Mathf.Sqrt(_data.JumpForce * -2f * _data.Gravity);
+        }
+        
+        public void Dispose() => 
+            _input.Movement.Jump.performed -= context => Jump();
     }
 }
