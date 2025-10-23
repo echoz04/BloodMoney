@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Character Data
   m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Gameplay.Character.CharacterData
   <MoveSpeed>k__BackingField: 3
-  <JumpForce>k__BackingField: 2
+  <JumpForce>k__BackingField: 1.5
   <GroundStickForce>k__BackingField: -2
-  <GravityScale>k__BackingField: -9.81
+  <Gravity>k__BackingField: -9.81
