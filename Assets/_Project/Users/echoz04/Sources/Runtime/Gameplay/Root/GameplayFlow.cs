@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Sources.Runtime.Gameplay.Character;
 using Sources.Runtime.Services.Builders.Character;
 using Sources.Runtime.Services.Loaders.GameData;
 using Sources.Runtime.Services.Loaders.Resources;
@@ -13,14 +14,16 @@ namespace Sources.Runtime.Gameplay.Root
         private readonly IGameDataLoader _gameDataLoader;
         private readonly ICharacterBuilder _characterBuilder;
         private readonly Transform _characterSpawnPoint;
+        private readonly CursorLocker _cursorLocker;
 
         private GameplayFlow(IResourcesLoader resourcesLoader, IGameDataLoader gameDataLoader, ICharacterBuilder characterBuilder,
-        Transform characterSpawnPoint)
+        Transform characterSpawnPoint, CursorLocker cursorLocker)
         {
             _resourcesLoader = resourcesLoader;
             _gameDataLoader = gameDataLoader;
             _characterBuilder = characterBuilder;
             _characterSpawnPoint = characterSpawnPoint;
+            _cursorLocker = cursorLocker;
         }
         
         public void Start()
@@ -30,6 +33,8 @@ namespace Sources.Runtime.Gameplay.Root
 
         private async UniTask RunAsync()
         {
+            _cursorLocker.Lock();
+            
             await CreateCharacter();
         }
 
@@ -37,8 +42,6 @@ namespace Sources.Runtime.Gameplay.Root
         {
             var gameData = await _gameDataLoader.LoadAsync();
             var characterPrefab = await _resourcesLoader.GetCharacterRootAsync();
-            
-            Debug.Log($"Building character with prefab: {characterPrefab},  spawnPoint: {_characterSpawnPoint}  and gameData: {gameData}");
             
             _characterBuilder.Build(characterPrefab, _characterSpawnPoint, gameData.CharacterData);
         }
