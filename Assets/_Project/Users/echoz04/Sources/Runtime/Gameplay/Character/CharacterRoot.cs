@@ -1,4 +1,5 @@
 using UnityEngine;
+using VContainer;
 
 namespace Sources.Runtime.Gameplay.Character
 {
@@ -19,13 +20,18 @@ namespace Sources.Runtime.Gameplay.Character
             _controller ??= GetComponent<CharacterController>();
             _animator ??= GetComponent<Animator>();
         }
+
+        [Inject]
+        private void Construct(CharacterInput input)
+        {
+            _input = input;
+            
+            _input.Enable();
+        }
         
         public void Initialize(CharacterData data)
         {
             _data = data;
-            
-            _input = new CharacterInput();
-            _input.Enable();
 
             _mover = new CharacterMover(_input, _data, _controller, transform);
             _jumper = new CharacterJumper(_controller, _data, _input);
@@ -41,7 +47,7 @@ namespace Sources.Runtime.Gameplay.Character
 
         private void OnDestroy()
         {
-            _input?.Disable();
+            _input.Disable();
         }
     }
 }

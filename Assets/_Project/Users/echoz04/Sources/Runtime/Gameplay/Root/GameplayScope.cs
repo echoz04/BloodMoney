@@ -1,3 +1,4 @@
+using Sources.Runtime.Gameplay.Character;
 using Sources.Runtime.Services.Builders.Character;
 using Sources.Runtime.Services.Loaders.GameData;
 using Sources.Runtime.Services.Loaders.Resources;
@@ -14,13 +15,21 @@ namespace Sources.Runtime.Gameplay.Root
         
         protected override void Configure(IContainerBuilder builder)
         {
+            RegisterCursorLocker(builder);
             RegisterSceneLoader(builder);
             RegisterResourcesLoader(builder);
             RegisterGameDataLoader(builder);
+            RegisterCharacterInput(builder);
             RegisterCharacterBuilder(builder);
             RegisterEntryPoint(builder);
         }
 
+        private void RegisterCursorLocker(IContainerBuilder builder)
+        {
+            builder.Register<CursorLocker>(Lifetime.Singleton)
+                .AsSelf();
+        }
+        
         private void RegisterSceneLoader(IContainerBuilder builder)
         {
             builder.Register<SceneLoader>(Lifetime.Singleton)
@@ -37,6 +46,12 @@ namespace Sources.Runtime.Gameplay.Root
         {
             builder.Register<GameDataLoader>(Lifetime.Singleton)
                 .As<IGameDataLoader>();
+        }
+        
+        private void RegisterCharacterInput(IContainerBuilder builder)
+        {
+            builder.Register<CharacterInput>(Lifetime.Singleton)
+                .AsSelf();
         }
         
         private void RegisterCharacterBuilder(IContainerBuilder builder)
