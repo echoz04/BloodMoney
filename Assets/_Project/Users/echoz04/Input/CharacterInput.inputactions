@@ -113,6 +113,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Interactive",
+            "id": "c33353d0-bcd4-4e1e-b46b-2dae8b726133",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "9edb8acf-dba9-4e5a-b226-2fe6128a310b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "25c07972-ba4a-4118-b7aa-c5da6721571f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

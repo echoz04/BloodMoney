@@ -4,5 +4,6 @@ namespace Sources.Runtime.Services.Loaders.Scene
     {
         Bootstrap = 0,
         Level1 = 1,
+        Level2 = 2,
     }
 }

@@ -1,4 +1,5 @@
 using Sources.Runtime.Gameplay.Character;
+using Sources.Runtime.Gameplay.Helpers;
 using Sources.Runtime.Services.Builders.Character;
 using Sources.Runtime.Services.Loaders.GameData;
 using Sources.Runtime.Services.Loaders.Resources;
@@ -12,9 +13,12 @@ namespace Sources.Runtime.Gameplay.Root
     public class GameplayScope : LifetimeScope
     {
         [SerializeField] private Transform _characterSpawnPoint;
+        [SerializeField] private Scene _nextSceneToLoad;
+        [SerializeField] private OpenDoorPopup _openDoorPopup;
         
         protected override void Configure(IContainerBuilder builder)
         {
+            RegisterDoorDependencies(builder);
             RegisterCursorLocker(builder);
             RegisterSceneLoader(builder);
             RegisterResourcesLoader(builder);
@@ -22,6 +26,13 @@ namespace Sources.Runtime.Gameplay.Root
             RegisterCharacterInput(builder);
             RegisterCharacterBuilder(builder);
             RegisterEntryPoint(builder);
+        }
+
+        private void RegisterDoorDependencies(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(_nextSceneToLoad).AsSelf();
+            
+            builder.RegisterInstance(_openDoorPopup).AsSelf();
         }
 
         private void RegisterCursorLocker(IContainerBuilder builder)
