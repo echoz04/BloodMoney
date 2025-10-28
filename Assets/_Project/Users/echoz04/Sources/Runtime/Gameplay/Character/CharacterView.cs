@@ -4,6 +4,9 @@ namespace Sources.Runtime.Gameplay.Character
 {
     public sealed class CharacterView
     {
+        private static readonly int MoveSpeedHash = Animator.StringToHash("MoveSpeed");
+        private static readonly int GroundedHash = Animator.StringToHash("Grounded");
+        
         private readonly Animator _animator;
         private readonly CharacterMover _mover;
         private readonly CharacterJumper _jumper;
@@ -25,12 +28,12 @@ namespace Sources.Runtime.Gameplay.Character
         {
             float targetSpeed = moveDirection.magnitude;
             _currentMoveSpeed = Mathf.SmoothDamp(_currentMoveSpeed, targetSpeed, ref _moveSpeedVelocity, _animationSmoothTime);
-            _animator.SetFloat("MoveSpeed", _currentMoveSpeed);
+            _animator.SetFloat(MoveSpeedHash, _currentMoveSpeed);
         }
 
         public void Tick()
         {
-            _animator.SetBool("Grounded", _jumper.IsGrounded);
+            _animator.SetBool(GroundedHash, _jumper.IsGrounded);
         }
     }
 }

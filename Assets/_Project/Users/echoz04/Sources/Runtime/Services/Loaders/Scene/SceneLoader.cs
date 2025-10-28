@@ -10,6 +10,8 @@ namespace Sources.Runtime.Services.Loaders.Scene
         public event Action OnLoadingStarted;
 
         public event Action OnLoadingEnded;
+        
+        private const float DelayBeforeLoad = 1f;
 
         public void LoadScene(Scene scene) => LoadSceneAsync(scene).Forget();
 
@@ -20,6 +22,8 @@ namespace Sources.Runtime.Services.Loaders.Scene
                 OnLoadingStarted?.Invoke();
 
                 string sceneName = scene.ToString();
+                
+                await UniTask.WaitForSeconds(DelayBeforeLoad);
 
                 AsyncOperation loadSceneOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
