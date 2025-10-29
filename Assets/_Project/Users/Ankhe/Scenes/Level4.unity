@@ -11216,6 +11216,8 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   _characterSpawnPoint: {fileID: 1106879494}
+  _nextSceneToLoad: 0
+  _openDoorPopup: {fileID: 0}
 --- !u!4 &1626283990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3175741182274157859, guid: e14c06da4dfc4f2468a68ff00c717df0, type: 3}
