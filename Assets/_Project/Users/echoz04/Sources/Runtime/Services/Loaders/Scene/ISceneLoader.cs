@@ -10,6 +10,8 @@ namespace Sources.Runtime.Services.Loaders.Scene
         event Action OnLoadingEnded;
 
         void LoadScene(Scene scene);
+        
+        void ReloadScene();
 
         UniTask LoadSceneAsync(Scene scene);
     }

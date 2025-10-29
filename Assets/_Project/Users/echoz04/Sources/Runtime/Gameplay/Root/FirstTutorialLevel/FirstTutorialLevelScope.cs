@@ -13,6 +13,8 @@ namespace Sources.Runtime.Gameplay.Root.FirstTutorialLevel
         
         protected override void Configure(IContainerBuilder builder)
         {
+            Debug.Log("FirstTutorialLevelScope.Configure()");
+            
             RegisterTutorials(builder);
             RegisterEntryPoint(builder);
         }

@@ -32,17 +32,13 @@ namespace Sources.Runtime.Services.Loaders.Scene
             _sceneLoader.OnLoadingEnded += Hide;
         }
 
-        private void Show()
+        public void Show()
         {
-            Debug.Log("Show CurtaionViewRoot");
-            
             _animator.SetTrigger(ShowHash);
         }
 
-        private void Hide()
+        public void Hide()
         {
-            Debug.Log("Hide CurtaionViewRoot");
-            
             _animator.SetTrigger(HideHash);
         }
 
