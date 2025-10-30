@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638974378914262249
+  lastModified: 638974308111220080
   FileSizes:
   - Name: Desktop
     Value: 1396
@@ -197,7 +197,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638974378914242314
+  lastModified: 638974308111220080
   FileSizes:
   - Name: Desktop
     Value: 682
@@ -241,7 +241,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2548701176028723153}
   cacheVersion: 131849
-  cacheTime: 638974378914262249
+  cacheTime: 638974308111300081
   SerializableEventsDict:
   - key: event:/Ambiance/Level1
     index: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Ambiance.bank
   Name: Ambiance
   StudioPath: bank:/Ambiance
-  lastModified: 638974374636237973
+  lastModified: 638974308111220080
   FileSizes:
   - Name: Desktop
     Value: 2447584
@@ -508,7 +508,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638974374601149115
+  lastModified: 638974308111300081
   FileSizes:
   - Name: Desktop
     Value: 163264
@@ -528,7 +528,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638974374659262449
+  lastModified: 638974308111290081
   FileSizes:
   - Name: Desktop
     Value: 1712704
