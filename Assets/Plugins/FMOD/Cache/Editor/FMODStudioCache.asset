@@ -22,7 +22,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2613396089591345878}
   cacheVersion: 131849
-  cacheTime: 638974006332906785
+  cacheTime: 638974252467898969
   SerializableEventsDict: []
 --- !u!114 &2613396089591345878
 MonoBehaviour:
@@ -39,7 +39,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638974006332906785
+  lastModified: 638974252467898969
   FileSizes:
   - Name: Desktop
     Value: 724
@@ -59,7 +59,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638974006332745727
+  lastModified: 638974252467898969
   FileSizes:
   - Name: Desktop
     Value: 1074

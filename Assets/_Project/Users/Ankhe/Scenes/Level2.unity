@@ -11030,7 +11030,7 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 216668783}
   _characterSpawnPoint: {fileID: 87224099}
-  _nextSceneToLoad: 0
+  _nextSceneToLoad: 3
   _openDoorPopup: {fileID: 0}
 --- !u!1001 &1191852316
 PrefabInstance:

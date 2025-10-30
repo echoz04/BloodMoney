@@ -4104,6 +4104,37 @@ PrefabInstance:
       addedObject: {fileID: 341279078}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a79a14190d3d34f93236ba7164d734, type: 3}
+--- !u!1 &256004441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256004442}
+  m_Layer: 0
+  m_Name: fmod
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256004442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256004441}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.88952, y: 4.16049, z: 15.75508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &258489467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19043,7 +19074,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 1754212255}
-  - {fileID: 1150684796}
+  - {fileID: 1458642037}
   _characterSpawnPoint: {fileID: 1983124898}
   _nextSceneToLoad: 2
   _openDoorPopup: {fileID: 330486803}
@@ -32320,3 +32351,4 @@ SceneRoots:
   - {fileID: 72194302}
   - {fileID: 1937890511}
   - {fileID: 1150684795}
+  - {fileID: 256004442}

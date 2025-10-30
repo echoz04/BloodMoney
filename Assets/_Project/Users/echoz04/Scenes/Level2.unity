@@ -18095,7 +18095,7 @@ MonoBehaviour:
   - {fileID: 1272862260}
   - {fileID: 868138341}
   _characterSpawnPoint: {fileID: 2003923124}
-  _nextSceneToLoad: 2
+  _nextSceneToLoad: 3
   _openDoorPopup: {fileID: 1143707435}
 --- !u!4 &1825668906 stripped
 Transform:
