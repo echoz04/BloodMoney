@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{67070827-a013-4b8f-abe0-464869c8bac9}">
+		<property name="assetPath">
+			<value>Coin Bag Reward.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8221088435374149</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee5f7c70-cb91-4085-840d-e8b3fa05e026}</destination>
+		</relationship>
+	</object>
+</objects>

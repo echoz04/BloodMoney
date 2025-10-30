@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{eec97266-9d0f-4f98-a278-a31235754747}">
+		<property name="assetPath">
+			<value>Wind Chimes, Room, Organic.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>120</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee5f7c70-cb91-4085-840d-e8b3fa05e026}</destination>
+		</relationship>
+	</object>
+</objects>

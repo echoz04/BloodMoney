@@ -2,31 +2,31 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Workspace" id="{3985b6be-99b2-4d01-8caf-33fa8bacc311}">
 		<relationship name="masterEventFolder">
-			<destination>{d5268f4b-99e9-43d7-bc78-c1112caddd31}</destination>
+			<destination>{a8caa9db-03ea-4de6-91ab-d4218ec6c8c2}</destination>
 		</relationship>
 		<relationship name="masterTagFolder">
-			<destination>{d10374d6-ec92-4cee-8fe9-9870cc8b4da8}</destination>
+			<destination>{f1d16f28-01c8-409d-86de-1abd99703650}</destination>
 		</relationship>
 		<relationship name="masterEffectPresetFolder">
-			<destination>{418083e4-049f-456d-bc00-952747d63f36}</destination>
+			<destination>{584a0099-7c70-47ff-81c1-34da7bd3753b}</destination>
 		</relationship>
 		<relationship name="masterParameterPresetFolder">
-			<destination>{9cb876db-93eb-4917-9cde-6d25215b9af1}</destination>
+			<destination>{e49db72f-a368-4d7c-a08d-9464ba6d858e}</destination>
 		</relationship>
 		<relationship name="masterBankFolder">
-			<destination>{574dc3cd-b8af-4cfd-bcd4-34811d59496a}</destination>
+			<destination>{cdd9c57c-8d77-4a55-81e2-786ce0e3e5df}</destination>
 		</relationship>
 		<relationship name="masterSandboxFolder">
-			<destination>{dda13dc6-28ab-4e48-b562-18ea670ffdc7}</destination>
+			<destination>{46e065cd-7166-4fa1-ad9f-1eee67b099f8}</destination>
 		</relationship>
 		<relationship name="masterAssetFolder">
-			<destination>{7dd529ff-609f-46a3-9786-ae63da381a53}</destination>
+			<destination>{ee5f7c70-cb91-4085-840d-e8b3fa05e026}</destination>
 		</relationship>
 		<relationship name="mixer">
-			<destination>{7d2ac3b2-c144-4b01-913d-0c953683a554}</destination>
+			<destination>{8acf2af7-1168-4a7c-bad4-26876bd29883}</destination>
 		</relationship>
 		<relationship name="profilerSessionFolder">
-			<destination>{8b4fcbdc-bdcc-4a86-8c94-91cb71c6aa37}</destination>
+			<destination>{064b9d0c-514d-44b8-86d2-363424e6b653}</destination>
 		</relationship>
 		<relationship name="platforms">
 			<destination>{15e7a313-3a1b-4961-a577-e3081874d006}</destination>
