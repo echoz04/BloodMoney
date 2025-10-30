@@ -4720,6 +4720,7 @@ GameObject:
   - component: {fileID: 1338637790}
   - component: {fileID: 1338637792}
   - component: {fileID: 1338637791}
+  - component: {fileID: 1338637793}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -4771,6 +4772,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338637789}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1338637793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338637789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d3b034df83c25178034a3322b8266e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Gameplay.Zones.KillZone
 --- !u!1001 &1362871954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4977,7 +4990,7 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 438663103}
   - {fileID: 1264235052}
-  - {fileID: 118432538}
+  - {fileID: 1338637789}
   _characterSpawnPoint: {fileID: 1043831357}
   _nextSceneToLoad: 5
   _openDoorPopup: {fileID: 606462056}
