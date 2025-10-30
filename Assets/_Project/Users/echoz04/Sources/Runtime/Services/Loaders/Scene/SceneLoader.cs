@@ -13,7 +13,11 @@ namespace Sources.Runtime.Services.Loaders.Scene
         
         private const float DelayBeforeLoad = 1f;
 
-        public void LoadScene(Scene scene) => LoadSceneAsync(scene).Forget();
+        public void LoadScene(Scene scene) 
+            => LoadSceneAsync(scene).Forget();
+
+        public void ReloadScene() =>
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         public async UniTask LoadSceneAsync(Scene scene)
         {
@@ -27,7 +31,7 @@ namespace Sources.Runtime.Services.Loaders.Scene
 
                 AsyncOperation loadSceneOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
-                while (loadSceneOperation.isDone == false) await UniTask.Yield();
+                await loadSceneOperation.ToUniTask();
 
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
             }

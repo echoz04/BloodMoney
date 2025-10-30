@@ -40,6 +40,9 @@ namespace Sources.Runtime.Gameplay.Character
 
         private void Update()
         {
+            if(_controller.enabled == false)
+                return;
+            
             _mover.Tick();
             _jumper.Tick();
             _view.Tick();

@@ -18,6 +18,8 @@ namespace Sources.Runtime.Gameplay.Root
         
         protected override void Configure(IContainerBuilder builder)
         {
+            Debug.Log("GameplayScope.Configure()");
+            
             RegisterDoorDependencies(builder);
             RegisterCursorLocker(builder);
             RegisterSceneLoader(builder);

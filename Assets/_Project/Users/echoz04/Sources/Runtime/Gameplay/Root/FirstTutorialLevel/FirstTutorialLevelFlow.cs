@@ -17,4 +17,4 @@ namespace Sources.Runtime.Gameplay.Root.FirstTutorialLevel
             _moveTutorial.Show();
         }
     }
-}
+}   
