@@ -76,7 +76,7 @@ MonoBehaviour:
   - {fileID: 7298981323539842893}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -103,7 +103,7 @@ MonoBehaviour:
   - {fileID: 7298981323539842893}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 3177131090092883050}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638974308111220080
+  lastModified: 638974378914262249
   FileSizes:
   - Name: Desktop
     Value: 1396
@@ -197,7 +197,7 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638974308111220080
+  lastModified: 638974378914242314
   FileSizes:
   - Name: Desktop
     Value: 682
@@ -241,7 +241,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2548701176028723153}
   cacheVersion: 131849
-  cacheTime: 638974308111300081
+  cacheTime: 638976091351677799
   SerializableEventsDict:
   - key: event:/Ambiance/Level1
     index: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   - {fileID: 3177131090092883050}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -320,7 +320,7 @@ MonoBehaviour:
   - {fileID: 7772537034865057001}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -347,7 +347,7 @@ MonoBehaviour:
   - {fileID: 3177131090092883050}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -387,10 +387,10 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Ambiance.bank
   Name: Ambiance
   StudioPath: bank:/Ambiance
-  lastModified: 638974308111220080
+  lastModified: 638976091348218625
   FileSizes:
   - Name: Desktop
-    Value: 2447584
+    Value: 2448224
   Exists: 1
 --- !u!114 &4037899804882547017
 MonoBehaviour:
@@ -414,7 +414,7 @@ MonoBehaviour:
   - {fileID: 3177131090092883050}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -468,7 +468,7 @@ MonoBehaviour:
   - {fileID: 3177131090092883050}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -508,10 +508,10 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638974308111300081
+  lastModified: 638976091351677799
   FileSizes:
   - Name: Desktop
-    Value: 163264
+    Value: 163520
   Exists: 1
 --- !u!114 &7772537034865057001
 MonoBehaviour:
@@ -528,10 +528,10 @@ MonoBehaviour:
   Path: Assets/_Project/Users/Ankhe/FMOD/Bloodmoney/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638974308111290081
+  lastModified: 638976091349986599
   FileSizes:
   - Name: Desktop
-    Value: 1712704
+    Value: 1712960
   Exists: 1
 --- !u!114 &8461643070480108134
 MonoBehaviour:
@@ -555,7 +555,7 @@ MonoBehaviour:
   - {fileID: 7772537034865057001}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
