@@ -16,8 +16,12 @@ namespace Sources.Runtime.Services.Loaders.Scene
         public void LoadScene(Scene scene) 
             => LoadSceneAsync(scene).Forget();
 
-        public void ReloadScene() =>
+        public void ReloadScene()
+        {
+            OnLoadingStarted?.Invoke();
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         public async UniTask LoadSceneAsync(Scene scene)
         {

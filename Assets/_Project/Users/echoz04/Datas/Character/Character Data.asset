@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90efc6e5a1904784b1593ea696a41095, type: 3}
   m_Name: Character Data
   m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Gameplay.Character.CharacterData
+  <HealthCount>k__BackingField: 3
+  <HeartPrefab>k__BackingField: {fileID: 4898117153497042775, guid: dacaeaa9ca8f33d379bf89755bf1a523, type: 3}
   <MoveSpeed>k__BackingField: 3
   <JumpForce>k__BackingField: 1.5
   <GroundStickForce>k__BackingField: -2
   <Gravity>k__BackingField: -9.81
+  <CoyoteTime>k__BackingField: 0.15
+  <JumpBufferTime>k__BackingField: 0.1

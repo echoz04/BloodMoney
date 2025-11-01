@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Game.GameData
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 4525558c6b72f54929a16e115d642056, type: 2}
+  <EventReferences>k__BackingField: {fileID: 11400000, guid: ba277275da8226606b7b9a4df36e7a59, type: 2}

@@ -6,6 +6,7 @@ namespace Sources.Runtime.Gameplay.Character
     public sealed class CharacterRoot : MonoBehaviour
     {
         [SerializeField] private CharacterController _controller;
+        [SerializeField] private CharacterHealthView _healthView;
         [SerializeField] private Animator _animator;
         
         private CharacterData _data;
@@ -13,11 +14,13 @@ namespace Sources.Runtime.Gameplay.Character
         private CharacterInput _input;
         private CharacterMover _mover;
         private CharacterJumper _jumper;
+        private CharacterHealth _health;
         private CharacterView _view;
 
         private void OnValidate()
         {
             _controller ??= GetComponent<CharacterController>();
+            _healthView ??= GetComponent<CharacterHealthView>();
             _animator ??= GetComponent<Animator>();
         }
 
@@ -35,7 +38,10 @@ namespace Sources.Runtime.Gameplay.Character
 
             _mover = new CharacterMover(_input, _data, _controller, transform);
             _jumper = new CharacterJumper(_controller, _data, _input);
+            _health = new CharacterHealth(_data);
             _view = new CharacterView(_animator, _mover, _jumper);
+            
+            _healthView.Initialize(_health, _data);
         }
 
         private void Update()
@@ -47,6 +53,9 @@ namespace Sources.Runtime.Gameplay.Character
             _jumper.Tick();
             _view.Tick();
         }
+        
+        public void ApplyDamage(int damage) =>
+            _health.ApplyDamage(damage);
 
         private void OnDestroy()
         {

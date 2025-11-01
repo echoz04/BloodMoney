@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Sources.Runtime.Gameplay.Character
 {
     [CreateAssetMenu(menuName = "Datas/Character", fileName = "Character Data")]
     public class CharacterData : ScriptableObject
     {
+        [field: SerializeField] public int HealthCount { get; private set; } = 3;
+        [field: SerializeField] public GameObject HeartPrefab { get; private set; }
         [field: SerializeField] public float MoveSpeed { get; private set; } = 3f;
         [field: SerializeField] public float JumpForce { get; private set; } = 5f;
         [field: SerializeField] public float GroundStickForce { get; private set; } = -2f;
