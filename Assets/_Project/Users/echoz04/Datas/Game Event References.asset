@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6dcdaed8de45329ca219e345ed78bd, type: 3}
+  m_Name: Game Event References
+  m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Game.GameEventReferences
+  <CharacterFootsteps>k__BackingField:
+    Guid:
+      Data1: 99550828
+      Data2: 1279620573
+      Data3: -835779654
+      Data4: -1021287008
+    Path: event:/FX/Run
+  <CharacterJump>k__BackingField:
+    Guid:
+      Data1: -917449144
+      Data2: 1238253726
+      Data3: -1629569652
+      Data4: -801905280
+    Path: event:/FX/Jump

@@ -19795,8 +19795,15 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 1954344353}
   - {fileID: 640704024}
+  _ambienceReference:
+    Guid:
+      Data1: 668723141
+      Data2: 1195892017
+      Data3: 1712627879
+      Data4: -969855212
+    Path: event:/Ambiance/Level3
   _characterSpawnPoint: {fileID: 165823877}
-  _nextSceneToLoad: 4
+  _nextSceneToLoad: 5
   _openDoorPopup: {fileID: 2137757766}
 --- !u!4 &711515621 stripped
 Transform:

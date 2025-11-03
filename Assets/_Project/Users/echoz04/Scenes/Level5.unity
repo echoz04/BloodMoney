@@ -4991,8 +4991,15 @@ MonoBehaviour:
   - {fileID: 438663103}
   - {fileID: 1264235052}
   - {fileID: 1338637789}
+  _ambienceReference:
+    Guid:
+      Data1: 106629921
+      Data2: 1145993066
+      Data3: -1857252165
+      Data4: -760131892
+    Path: event:/Ambiance/Level5
   _characterSpawnPoint: {fileID: 1043831357}
-  _nextSceneToLoad: 5
+  _nextSceneToLoad: 7
   _openDoorPopup: {fileID: 606462056}
 --- !u!1001 &1450875585
 PrefabInstance:

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Project/Users/echoz04/Scenes/Bootstrap.unity
     guid: 5f0b7b9419c7b1cffb7d292e818757e8
   - enabled: 1
+    path: Assets/_Project/Users/echoz04/Scenes/Menu.unity
+    guid: 442ada94a8a9d335fb11ccc7d4764adb
+  - enabled: 1
     path: Assets/_Project/Users/echoz04/Scenes/Level1.unity
     guid: 2847f0c7372b91b158d144dac22fedc7
   - enabled: 1
@@ -23,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Users/echoz04/Scenes/Level5.unity
     guid: 888b09294b4e0fcd08eb959879eede35
+  - enabled: 1
+    path: Assets/_Project/Users/echoz04/Scenes/End.unity
+    guid: 2747776e011e649cd950ec033c322a37
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

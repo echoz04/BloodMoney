@@ -1,17 +1,22 @@
+using FMODUnity;
 using Sources.Runtime.Gameplay.Character;
 using Sources.Runtime.Gameplay.Helpers;
+using Sources.Runtime.Services.AudioPlayer;
 using Sources.Runtime.Services.Builders.Character;
 using Sources.Runtime.Services.Loaders.GameData;
 using Sources.Runtime.Services.Loaders.Resources;
 using VContainer;
 using VContainer.Unity;
 using Sources.Runtime.Services.Loaders.Scene;
+using Sources.Runtime.Services.SceneReloader;
 using UnityEngine;
 
 namespace Sources.Runtime.Gameplay.Root
 {
     public class GameplayScope : LifetimeScope
     {
+        [SerializeField] private EventReference _ambienceReference;
+        
         [SerializeField] private Transform _characterSpawnPoint;
         [SerializeField] private Scene _nextSceneToLoad;
         [SerializeField] private OpenDoorPopup _openDoorPopup;
@@ -27,6 +32,8 @@ namespace Sources.Runtime.Gameplay.Root
             RegisterGameDataLoader(builder);
             RegisterCharacterInput(builder);
             RegisterCharacterBuilder(builder);
+            RegisterAudioPlayer(builder);
+            RegisterSceneReloader(builder);
             RegisterEntryPoint(builder);
         }
 
@@ -73,10 +80,23 @@ namespace Sources.Runtime.Gameplay.Root
                 .As<ICharacterBuilder>();
         }
         
+        private void RegisterAudioPlayer(IContainerBuilder builder)
+        {
+            builder.Register<AudioPlayer>(Lifetime.Singleton)
+                .As<IAudioPlayer>();
+        }
+        
+        private void RegisterSceneReloader(IContainerBuilder builder)
+        {
+            builder.Register<SceneReloader>(Lifetime.Singleton)
+                .AsSelf();
+        }
+        
         private void RegisterEntryPoint(IContainerBuilder builder)
         {
             builder.RegisterEntryPoint<GameplayFlow>()
-                .WithParameter(_characterSpawnPoint);
+                .WithParameter(_characterSpawnPoint)
+                .WithParameter(_ambienceReference);
         }
     }
 }
