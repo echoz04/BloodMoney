@@ -5,6 +5,8 @@ namespace Sources.Runtime.Game
 {
     public class DisplayFPS : MonoBehaviour
     {
+        private static DisplayFPS _instance;
+        
         [SerializeField] private bool _showFPS = false;
         [SerializeField] private TextMeshProUGUI _fpsText;
         [SerializeField] private float _hudRefreshRate = 0.1f;
@@ -28,7 +30,6 @@ namespace Sources.Runtime.Game
         private void Start()
         {
             _showFPS = false;
-            DontDestroyOnLoad(this);
         }
 
         private void Update()

@@ -221,6 +221,15 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""e728e2e0-425e-4f1e-a811-755998c9f724"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -245,6 +254,17 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
                     ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a26d8d11-b074-4811-8d91-bbad350590e6"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -260,6 +280,7 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
         m_Interactive = asset.FindActionMap("Interactive", throwIfNotFound: true);
         m_Interactive_Interact = m_Interactive.FindAction("Interact", throwIfNotFound: true);
         m_Interactive_Reload = m_Interactive.FindAction("Reload", throwIfNotFound: true);
+        m_Interactive_Pause = m_Interactive.FindAction("Pause", throwIfNotFound: true);
     }
 
     ~@CharacterInput()
@@ -461,6 +482,7 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
     private List<IInteractiveActions> m_InteractiveActionsCallbackInterfaces = new List<IInteractiveActions>();
     private readonly InputAction m_Interactive_Interact;
     private readonly InputAction m_Interactive_Reload;
+    private readonly InputAction m_Interactive_Pause;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interactive".
     /// </summary>
@@ -480,6 +502,10 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interactive/Reload".
         /// </summary>
         public InputAction @Reload => m_Wrapper.m_Interactive_Reload;
+        /// <summary>
+        /// Provides access to the underlying input action "Interactive/Pause".
+        /// </summary>
+        public InputAction @Pause => m_Wrapper.m_Interactive_Pause;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -512,6 +538,9 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
             @Reload.started += instance.OnReload;
             @Reload.performed += instance.OnReload;
             @Reload.canceled += instance.OnReload;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         /// <summary>
@@ -529,6 +558,9 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
             @Reload.started -= instance.OnReload;
             @Reload.performed -= instance.OnReload;
             @Reload.canceled -= instance.OnReload;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         /// <summary>
@@ -612,5 +644,12 @@ public partial class @CharacterInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnReload(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPause(InputAction.CallbackContext context);
     }
 }
