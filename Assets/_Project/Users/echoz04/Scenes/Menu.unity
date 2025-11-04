@@ -5763,6 +5763,7 @@ GameObject:
   - component: {fileID: 1240398151}
   - component: {fileID: 1240398150}
   - component: {fileID: 1240398149}
+  - component: {fileID: 1240398152}
   m_Layer: 5
   m_Name: Button_4
   m_TagString: Untagged
@@ -5833,7 +5834,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1240398150}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1240398152}
+        m_TargetAssemblyTypeName: Sources.Runtime.Menu.QuitGameButton, Assembly-CSharp
+        m_MethodName: Do
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1240398150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5872,6 +5885,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240398147}
   m_CullTransparentMesh: 1
+--- !u!114 &1240398152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240398147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced30b68ea1c494d9891036086796f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sources.Runtime.Menu.QuitGameButton
 --- !u!1 &1253188548
 GameObject:
   m_ObjectHideFlags: 0
@@ -7542,13 +7567,6 @@ MonoBehaviour:
   - {fileID: 235731940}
   - {fileID: 1364105187}
   - {fileID: 276566176}
-  _backgroundEventReference:
-    Guid:
-      Data1: -2014958284
-      Data2: 1140925176
-      Data3: 2051999390
-      Data4: 1997081493
-    Path: event:/Music/MainMusic
 --- !u!1 &1774224428
 GameObject:
   m_ObjectHideFlags: 0
