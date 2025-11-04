@@ -10,8 +10,6 @@ namespace Sources.Runtime.Gameplay.Root
 {
     public class MenuScope : LifetimeScope
     {
-        [SerializeField] private EventReference _backgroundEventReference;
-        
         protected override void Configure(IContainerBuilder builder)
         {
             RegisterMenuLogic(builder);
