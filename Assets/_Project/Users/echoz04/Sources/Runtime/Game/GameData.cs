@@ -7,6 +7,5 @@ namespace Sources.Runtime.Game
     public class GameData : ScriptableObject
     {
         [field: SerializeField] public CharacterData CharacterData { get; private set; }
-        [field: SerializeField] public GameEventReferences EventReferences { get; private set; }
     }
 }
