@@ -7,26 +7,36 @@ namespace Sources.Runtime.Gameplay.Character
     {
         public event Action<Vector3> MovementDirectionComputed;
         
-        private const float FullRotation = 360;
+        private const float FullRotation = 360f;
         
         private readonly CharacterData _data;
         private readonly CharacterController _controller;
         private readonly CharacterInput _input;
         private readonly Transform _transform;
         private readonly Camera _camera;
+        private readonly AudioSource _audioSource;
         
         private float _currentTargetRotation;
         private float _timeToReachTargetRotation = 0.14f;
         private float _dampedTargetRotationCurrentVelocity;
         private float _dampedTargetRotationPassedTime;
-        
-        public CharacterMover(CharacterInput input, CharacterData data, CharacterController controller, Transform transform)
+
+        private float _footstepTimer;
+        private const float FootstepInterval = 0.4f;
+
+        public CharacterMover(
+            CharacterInput input, 
+            CharacterData data, 
+            CharacterController controller, 
+            Transform transform,
+            AudioSource audioSource)
         {
             _data = data;
             _controller = controller;
             _input = input;
             _transform = transform;
             _camera = Camera.main;
+            _audioSource = audioSource;
         }
 
         public void Tick()
@@ -40,10 +50,26 @@ namespace Sources.Runtime.Gameplay.Character
 
             if (convertedDirection != Vector3.zero)
             {
+                PlayFootstepSound();
                 Rotate(inputAngleDirection);
-                Vector3 move = Quaternion.Euler(0, inputAngleDirection, 0) * Vector3.forward * (_data.MoveSpeed * Time.deltaTime);
+
+                Vector3 move = Quaternion.Euler(0, inputAngleDirection, 0) 
+                             * Vector3.forward 
+                             * (_data.MoveSpeed * Time.deltaTime);
+                
                 _controller.Move(move);
             }
+        }
+
+        private void PlayFootstepSound()
+        {
+            _footstepTimer -= Time.deltaTime;
+            if (_footstepTimer > 0)
+                return;
+
+            if(_controller.isGrounded == true) _audioSource.PlayOneShot(_data.FootsClip);
+            
+            _footstepTimer = FootstepInterval;
         }
 
         private void Rotate(float inputAngleDirection)

@@ -14,5 +14,9 @@ namespace Sources.Runtime.Gameplay.Character
         [field: SerializeField] public float Gravity { get; private set; } = -9.81f;
         [field: SerializeField] public float CoyoteTime { get; private set; } = 0.15f;
         [field: SerializeField] public float JumpBufferTime { get; private set; } = 0.1f;
+        [field: Space]
+        
+        [field: SerializeField] public AudioClip FootsClip { get; private set; }
+        [field: SerializeField] public AudioClip JumpClip { get; private set; }
     }
 }
