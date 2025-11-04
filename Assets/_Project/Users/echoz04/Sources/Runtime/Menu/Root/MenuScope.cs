@@ -1,6 +1,4 @@
-using FMODUnity;
 using Sources.Runtime.Menu;
-using Sources.Runtime.Services.AudioPlayer;
 using VContainer;
 using VContainer.Unity;
 using Sources.Runtime.Services.Loaders.Scene;
@@ -14,7 +12,6 @@ namespace Sources.Runtime.Gameplay.Root
         {
             RegisterMenuLogic(builder);
             RegisterSceneLoader(builder);
-            RegisterAudioPlayer(builder);
         }
         
         private void RegisterMenuLogic(IContainerBuilder builder)
@@ -27,12 +24,6 @@ namespace Sources.Runtime.Gameplay.Root
         {
             builder.Register<SceneLoader>(Lifetime.Singleton)
                 .As<ISceneLoader>();
-        }
-        
-        private void RegisterAudioPlayer(IContainerBuilder builder)
-        {
-            builder.Register<AudioPlayer>(Lifetime.Singleton)
-                .As<IAudioPlayer>();
         }
     }
 }
