@@ -8,6 +8,7 @@ namespace Sources.Runtime.Gameplay.Character
         [SerializeField] private CharacterController _controller;
         [SerializeField] private CharacterHealthView _healthView;
         [SerializeField] private Animator _animator;
+        [SerializeField] private AudioSource _audioSource;
         
         private CharacterData _data;
         
@@ -36,8 +37,8 @@ namespace Sources.Runtime.Gameplay.Character
         {
             _data = data;
 
-            _mover = new CharacterMover(_input, _data, _controller, transform);
-            _jumper = new CharacterJumper(_controller, _data, _input);
+            _mover = new CharacterMover(_input, _data, _controller, transform, _audioSource);
+            _jumper = new CharacterJumper(_controller, _data, _input, _audioSource);
             _health = new CharacterHealth(_data);
             _view = new CharacterView(_animator, _mover, _jumper);
             

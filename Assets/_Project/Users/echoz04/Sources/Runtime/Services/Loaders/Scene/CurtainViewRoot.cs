@@ -10,6 +10,7 @@ namespace Sources.Runtime.Services.Loaders.Scene
         private static readonly int HideHash = Animator.StringToHash("Hide");
         
         [SerializeField] private Animator _animator;
+        [SerializeField] private CanvasGroup _canvasGroup;
         
         private ISceneLoader _sceneLoader;
 
@@ -35,11 +36,13 @@ namespace Sources.Runtime.Services.Loaders.Scene
         public void Show()
         {
             _animator.SetTrigger(ShowHash);
+            _canvasGroup.alpha = 1;
         }
 
         public void Hide()
         {
             _animator.SetTrigger(HideHash);
+            _canvasGroup.alpha = 0;
         }
 
         private void OnDestroy()

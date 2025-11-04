@@ -20,3 +20,5 @@ MonoBehaviour:
   <Gravity>k__BackingField: -9.81
   <CoyoteTime>k__BackingField: 0.15
   <JumpBufferTime>k__BackingField: 0.1
+  <FootsClip>k__BackingField: {fileID: 8300000, guid: b00280e7d970ecf469535493fdc4e551, type: 3}
+  <JumpClip>k__BackingField: {fileID: 8300000, guid: 5e0a6df0576a6e5449059bb361fe2a8a, type: 3}
